@@ -5,15 +5,19 @@
     "source.unusedImports": "explicit",
     "source.organizeImports": "explicit"
   },
-  "editor.rulers": [100],
+  "editor.rulers": [
+    100
+  ],
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "isort.args": ["--profile", "black", "--skip-glob", "*/migrations/*"],
   "python.testing.unittestEnabled": true,
   "python.testing.pytestEnabled": false,
-  "python.testing.unittestArgs": ["-p", "*test*.py"]
+  "python.testing.unittestArgs": [
+    "-p",
+    "*test*.py"
+  ]
 }

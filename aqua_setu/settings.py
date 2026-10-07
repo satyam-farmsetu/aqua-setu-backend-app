@@ -10,9 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
+from collections.abc import Sequence
 from datetime import timedelta
 from pathlib import Path
-from typing import Sequence
 
 from corsheaders.defaults import default_headers
 from decouple import Csv, config

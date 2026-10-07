@@ -22,17 +22,16 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "black>=26.10.0",
     "coverage>=7.16.2",
     "decouple-types>=1.0.2",
     "django-filter-stubs>=0.1.3",
     "django-stubs>=6.1.2",
     "djangorestframework-stubs>=3.18.1",
-    "isort>=9.0.2",
     "mypy>=2.4.0",
     "pygraphviz>=2.0.3",
     "pylint>=4.1.2",
     "pylint-django>=2.8.0",
+    "ruff>=0.16.10",
     "types-django-import-export>=4.4.0.20260813",
 ]
 prod = [
@@ -44,9 +43,26 @@ prod = [
 [tool.uv]
 package = false
 
-[tool.black]
-force-exclude = "/migrations/"
+[tool.ruff]
+target-version = "py314"
+extend-exclude = ["**/migrations/*.py"]
 
-[tool.isort]
-profile = "black"
-skip_glob = "**/migrations/*.py"
+[tool.ruff.lint]
+select = [
+    "E", "W",  # pycodestyle
+    "F",       # pyflakes
+    "I",       # isort
+    "B",       # flake8-bugbear
+    "UP",      # pyupgrade
+    "SIM",     # flake8-simplify
+    "DJ",      # flake8-django
+    "PL",      # pylint
+    "RUF",     # ruff-specific
+]
+ignore = ["E501"]  # line length is handled by the formatter
+
+[tool.ruff.lint.per-file-ignores]
+"manage.py" = ["PLC0415"]  # Django's lazy import of execute_from_command_line
+
+[tool.ruff.lint.isort]
+known-first-party = ["aqua_setu"]
