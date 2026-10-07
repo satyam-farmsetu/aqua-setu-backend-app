@@ -14,9 +14,40 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+from drf_spectacular.views import (
+    SpectacularAPIView,
+    SpectacularRedocView,
+    SpectacularSwaggerView,
+)
+
+# Global admin branding
+admin.site.site_header = "AquaSetu Admin"
+admin.site.site_title = "AquaSetu Admin"
+admin.site.index_title = "Operations Dashboard"
+
+
+# OpenAPI Urls
+schema_urlpatterns = [
+    path("", SpectacularAPIView.as_view(), name="schema"),
+    path(
+        "swagger-ui/",
+        SpectacularSwaggerView.as_view(url_name="schema"),
+        name="swagger-ui",
+    ),
+    path(
+        "redoc/",
+        SpectacularRedocView.as_view(url_name="schema"),
+        name="redoc",
+    ),
+]
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # Admin Urls
+    path("admin/", admin.site.urls),
+    # OpenAPI Urls
+    path("schema/", include(schema_urlpatterns)),
 ]
