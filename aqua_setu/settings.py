@@ -68,6 +68,8 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "rest_framework_simplejwt.token_blacklist",
     "django_extensions",
+    # Local apps
+    "accounts",
 ]
 
 if DEBUG:
@@ -161,6 +163,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "accounts.User"
 
 # Internationalization
 # https://docs.djangoproject.com/en/6.1/topics/i18n/

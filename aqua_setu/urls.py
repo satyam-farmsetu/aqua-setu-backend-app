@@ -45,9 +45,16 @@ schema_urlpatterns = [
 ]
 
 
+# V1 API Urls
+v1_api_urlpatterns = [
+    path("accounts/", include("accounts.urls.v1")),
+]
+
 urlpatterns = [
     # Admin Urls
     path("admin/", admin.site.urls),
     # OpenAPI Urls
     path("schema/", include(schema_urlpatterns)),
+    # V1 API Urls
+    path("v1/", include(v1_api_urlpatterns)),
 ]
