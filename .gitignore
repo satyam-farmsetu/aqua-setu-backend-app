@@ -13,3 +13,4 @@ media/
 *.png
 .vercel
 .env*
+!.env.example
