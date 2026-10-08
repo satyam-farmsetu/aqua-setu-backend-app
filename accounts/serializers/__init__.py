@@ -1,3 +1,5 @@
+"""DRF serializers for the accounts app."""
+
 from .login import LoginSerializer
 from .logout import LogoutSerializer
 from .me import MeSerializer

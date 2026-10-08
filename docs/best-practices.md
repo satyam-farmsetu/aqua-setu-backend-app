@@ -39,11 +39,12 @@
 Before pushing:
 
 ```sh
-uv run ruff check --fix . && uv run ruff format . && uv run pylint **/*.py && uv run mypy . && uv run manage.py test
+uv run ruff check --fix . && uv run ruff format . && uv run mypy . && uv run manage.py test
 ```
 
 - Type-annotate function signatures. mypy must pass.
-- Keep Ruff and Pylint clean rather than accumulating `# noqa`. When a suppression is justified, scope it to one line and give the reason.
+- Every module, package, class, function and method needs a docstring (Ruff `D1`). One line is enough.
+- Keep Ruff clean rather than accumulating `# noqa`. When a suppression is justified, scope it to one line and give the reason.
 - Write tests in `<app>/tests/` using Django's test runner (`TestCase`, `APITestCase`).
 
 ## Dependencies

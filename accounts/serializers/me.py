@@ -1,3 +1,5 @@
+"""Serializer for the authenticated user's profile."""
+
 from rest_framework import serializers
 
 from accounts.models import User

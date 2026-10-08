@@ -1,3 +1,5 @@
+"""Logout endpoint that blacklists the given refresh token."""
+
 from drf_spectacular.utils import extend_schema
 from rest_framework import status
 from rest_framework.request import Request

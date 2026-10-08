@@ -43,7 +43,6 @@ Static files (from `collectstatic`) and media (user uploads) are handled separat
 | Package | What it does | Alternatives / notes |
 | --- | --- | --- |
 | **ruff** | Linter, import sorter and formatter | See [linting-and-formatting.md](linting-and-formatting.md) |
-| **pylint**, **pylint-django** | Deeper, Django-aware linting | See [linting-and-formatting.md](linting-and-formatting.md) |
 | **mypy** | Static type checker | See [type-checking.md](type-checking.md) |
 | **django-stubs**, **djangorestframework-stubs**, **django-filter-stubs**, **types-django-import-export**, **decouple-types** | Type information for libraries that do not ship their own | Required for mypy to understand Django and DRF. See [type-checking.md](type-checking.md) |
 | **coverage** | Measures which lines the tests run | pytest + pytest-cov (if we switch from Django's test runner to pytest) |

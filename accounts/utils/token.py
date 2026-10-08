@@ -1,3 +1,5 @@
+"""Helpers for working with JWT refresh tokens."""
+
 from typing import Any, cast
 
 from rest_framework_simplejwt.tokens import RefreshToken

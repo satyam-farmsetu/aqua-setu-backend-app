@@ -30,8 +30,6 @@ dev = [
     "djangorestframework-stubs>=3.18.1",
     "mypy>=2.4.0",
     "pygraphviz>=2.0.3",
-    "pylint>=4.1.2",
-    "pylint-django>=2.8.0",
     "ruff>=0.16.10",
     "types-django-import-export>=4.4.0.20260813",
 ]
@@ -53,6 +51,8 @@ select = [
     "E", "W",  # pycodestyle
     "F",       # pyflakes
     "I",       # isort
+    "N",       # pep8-naming
+    "D1",      # pydocstyle: missing docstrings
     "B",       # flake8-bugbear
     "UP",      # pyupgrade
     "SIM",     # flake8-simplify

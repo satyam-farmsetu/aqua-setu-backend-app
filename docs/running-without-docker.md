@@ -77,7 +77,6 @@ Run these before pushing:
 ```sh
 uv run ruff check --fix .    # lint + sort imports
 uv run ruff format .         # format
-uv run pylint **/*.py        # Django-aware lint
 uv run mypy .                # type check
 ```
 

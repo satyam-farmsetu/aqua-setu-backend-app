@@ -1,3 +1,5 @@
+"""Version 1 URLs for the accounts app: login, logout, token refresh and profile."""
+
 from django.urls import path
 from rest_framework import routers
 from rest_framework_simplejwt.views import TokenRefreshView

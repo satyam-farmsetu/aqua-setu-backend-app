@@ -1,3 +1,5 @@
+"""Endpoint for the authenticated user's profile."""
+
 from typing import cast
 
 from drf_spectacular.utils import extend_schema

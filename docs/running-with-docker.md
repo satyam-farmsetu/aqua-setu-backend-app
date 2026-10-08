@@ -67,7 +67,7 @@ docker compose down -v
 
 ## Linters and type checking
 
-The dev image only contains runtime dependencies. Run Ruff, Pylint and mypy on your host with `uv` (see [running without Docker](running-without-docker.md#code-quality)). They do not need the database.
+The dev image only contains runtime dependencies. Run Ruff and mypy on your host with `uv` (see [running without Docker](running-without-docker.md#code-quality)). They do not need the database.
 
 ## Building the production image
 

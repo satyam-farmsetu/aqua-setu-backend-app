@@ -1,3 +1,5 @@
+"""Manager for the custom User model, using email as the login field."""
+
 from django.contrib.auth.base_user import BaseUserManager
 
 

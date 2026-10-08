@@ -1,3 +1,5 @@
+"""Serializer that validates and blacklists a refresh token on logout."""
+
 from rest_framework import serializers
 from rest_framework_simplejwt.exceptions import TokenError
 

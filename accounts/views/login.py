@@ -1,3 +1,5 @@
+"""Login endpoint that returns a JWT access and refresh token pair."""
+
 from drf_spectacular.utils import extend_schema
 from rest_framework import status
 from rest_framework_simplejwt.views import TokenObtainPairView

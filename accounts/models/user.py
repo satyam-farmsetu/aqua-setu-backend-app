@@ -1,3 +1,5 @@
+"""Custom User model that logs in with email instead of username."""
+
 from typing import ClassVar
 
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin

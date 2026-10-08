@@ -30,7 +30,7 @@ Each page explains what we use, why, and what the alternatives are.
 | --- | --- |
 | [Dependencies](docs/dependencies.md) | Every package in `pyproject.toml`: purpose, reason, alternatives |
 | [Package management](docs/package-management.md) | uv vs pip, Poetry and others; lockfile; extras; common commands |
-| [Linting and formatting](docs/linting-and-formatting.md) | Ruff vs Pylint (and Black, isort, Flake8), enabled rules |
+| [Linting and formatting](docs/linting-and-formatting.md) | Ruff: enabled rules, why not Pylint, what it replaced |
 | [Type checking](docs/type-checking.md) | mypy vs Pyright and others; Django type stubs |
 | [Docker](docs/docker.md) | Multi-stage Dockerfile and Compose, practices used |
 | [Best practices](docs/best-practices.md) | Project conventions: config, database, app layout, API, security |
@@ -44,7 +44,6 @@ docs/             Documentation
 Dockerfile        Multi-stage image (dev, prod)
 compose.yaml      Local Postgres + backend
 pyproject.toml    Dependencies and tool config (Ruff)
-.pylintrc         Pylint config
 mypy.ini          mypy config
 ```
 

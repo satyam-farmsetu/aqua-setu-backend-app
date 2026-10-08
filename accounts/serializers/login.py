@@ -1,3 +1,5 @@
+"""Serializer for the login request."""
+
 from rest_framework import serializers
 
 

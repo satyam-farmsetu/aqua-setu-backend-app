@@ -1,3 +1,5 @@
+"""Serializer describing the JWT token pair response."""
+
 from rest_framework import serializers
 
 
